@@ -131,15 +131,4 @@ body {
     color: white;
 
     text-align: center;
-
-    align-items: center;
-
-}
-
-.twitter-post-box {
-    margin: auto;
-
-    .twitter-tweet {
-        float:center;
-    }
 }
