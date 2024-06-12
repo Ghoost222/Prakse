@@ -1,0 +1,116 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    background-color: rgb(40, 40, 40);
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    color: white;
+    top: 0;
+    object-position: center;
+    align-items: center;
+    padding: 1%;
+}
+
+
+
+.home-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
+    color: white;
+    font-size: 24px;
+    margin: 0%;
+
+    top: 0;
+    float: left;
+    margin-left: 2%;
+    opacity: 1;
+}
+
+.home-button:hover {
+    background-color: grey;
+    color: black;
+}
+
+.quizz-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
+    color: white;
+    font-size: 24px;
+    margin: 0%;
+
+    top: 0;
+    float: left;
+    margin-left: 2%;
+    opacity: 1;
+}
+
+.quizz-button:hover {
+    background-color: grey;
+    color: black;
+}
+
+.add-quizz-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+
+    color: white;
+    font-size: 24px;
+    margin: 0%;
+
+    top: 0;
+    float: left;
+    margin-left: 2%;
+}
+
+.add-quizz-button:hover {
+    background-color: grey;
+    color: black;
+}
+
+
+
+
+
+.main {
+    height: 90%;
+    margin-top: 10%;
+}
+
+.post {
+    margin: 2%;
+    float: left;
+
+    width: 65%;
+    height: auto;
+
+    padding-top: 3%;
+    padding-bottom: 5%;
+
+    border: 1px solid black;
+    box-shadow: 0 0 20px black;
+    background-color: #282828;
+    color: white;
+    border-radius: 30px;
+
+    text-align: center;
+}
