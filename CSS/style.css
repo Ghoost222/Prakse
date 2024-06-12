@@ -106,11 +106,14 @@ body {
     padding-top: 3%;
     padding-bottom: 5%;
 
-    border: 1px solid black;
-    box-shadow: 0 0 20px black;
+    border: transparent;
+    border-bottom: 2px solid rgb(100, 100, 100);
     background-color: #282828;
     color: white;
-    border-radius: 30px;
 
     text-align: center;
+}
+
+.post p {
+    left: 0;
 }
