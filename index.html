@@ -8,6 +8,11 @@
   <title> Blog </title>
 
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <!--font-family: "JetBrains Mono", monospace;-->
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <!--font-family: "Oblivion";-->
+
 </head>
 
 <body>
@@ -31,7 +36,16 @@
     <div class = "main">
         <div class = "post1">
             <h1> Scott is a tortured poet! </h1>
-            <object data = "txt/fnaf6endingspeech.txt"> </object>
+            <object type = "text/html" data = "txt/fnaf6endingspeech.html" id = "fnaf"> </object>
+
+            <script>
+                window.onload = function() {
+                    var div = document.getElementById('fnaf');
+                    var width = div.clientWidth; // Get the current width of the div
+                    var height = (width / 16) * 9; // Calculate the height based on a 16:9 aspect ratio
+                    div.style.height = height + 'px'; // Set the calculated height in pixels
+                };
+            </script>
         </div>
 
         <div class = "post2">
@@ -40,8 +54,13 @@
         </div>
 
         <div class = "post3">
-            <h1> Here is a ████ photo </h1>
+            <h1> I FUCKING LOVE LEYLEY COSPLAYS </h1>
             <blockquote class="twitter-tweet tw-align-center" data-theme="dark"><p lang="en" dir="ltr">You chose to do it, and you chose me 💀 <a href="https://t.co/rrlJiSKNnV">pic.twitter.com/rrlJiSKNnV</a></p>&mdash; Saruei 💥 (@Saruei_) <a href="https://twitter.com/Saruei_/status/1771304893539611015?ref_src=twsrc%5Etfw">March 22, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class = "post3">
+            <h1> This is that armpit girl </h1>
+            <blockquote class="twitter-tweet tw-align-center" data-theme="dark"> <p lang="en" dir="ltr">Let me empathize with you more ✂️ <a href="https://t.co/ETxPbQA9QZ">pic.twitter.com/ETxPbQA9QZ </a> </p>&mdash; Saruei 💥 (@Saruei_) <a href="https://twitter.com/Saruei_/status/1772730404627210408?ref_src=twsrc%5Etfw"> March 26, 2024 </a> </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"> </script>
         </div>
     </div>
 

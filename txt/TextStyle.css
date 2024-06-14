@@ -1,0 +1,28 @@
+@font-face {font-family: "GameBoy"; src: url('../fonts/GameBoy.ttf');}
+@font-face {font-family: "FNAF"; src: url('../fonts/Fnaf.ttf');}
+
+html, body {
+    background-color: rgb(18,18,18);
+    border: none;
+
+    font-size: 100%;
+    color: whitesmoke;
+
+    background-image: url('../images/fnaf_end.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    
+
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+  
+}
+
+pre {
+    font-family: "FNAF";
+    margin: 0;
+}
