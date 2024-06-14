@@ -2,24 +2,40 @@
 @font-face {font-family: "FNAF"; src: url('../fonts/Fnaf.ttf');}
 
 html, body {
-    background-color: rgb(18,18,18);
-    border: none;
+    padding: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 
-    font-size: 100%;
+    font-size: 1.5vw;
     color: whitesmoke;
 
+    background-color: rgb(18,18,18);
     background-image: url('../images/fnaf_end.png');
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-blend-mode: overlay;
-    
-
+    background-blend-mode: soft-light ;
 
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-  
+    .topfade {
+        position: fixed;
+        height: 30%;
+        width: 100%;
+        left: 0;
+        background-image: linear-gradient(black, transparent); 
+        top: 0;
+    }
+
+    .bottomfade {
+        position: fixed;
+        height: 30%;
+        width: 100%;
+        left: 0;
+        background-image: linear-gradient(transparent, black); 
+        bottom: 0;
+    }
 }
 
 pre {
