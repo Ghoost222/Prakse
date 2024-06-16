@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(30, 39, 50);
+    display: flex;
+}
+
+.header {
+    position: fixed;
+    background-color: black;
+    color: white;
+
+    padding: 1%;
+    width: 100%;
+    height: auto;
+
+    top: 0;
+    align-items: center;
+    display: flex;
+    margin: 0;
+
+    a {
+        margin-left: 2%;
+
+        button{
+            background-color: transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+        
+            color: white;
+            font-size: 2rem;
+            font-family: "GlitchGoblin";
+        
+            float: left;
+        }
+
+        button:hover {
+            border: transparent;
+            border-bottom: 1px solid white;
+            text-shadow: 5px 0 red,  -5px 0 cyan;
+        }
+    }
+}

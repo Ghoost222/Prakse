@@ -5,35 +5,44 @@
   <meta charset = "UTF-8">
   <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
   <link href = "CSS/styleV2.css" rel = "stylesheet">
+  <link href="fonts.css" rel="stylesheet">
   <title> Quizz </title>
-
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class = "header">
+    <div id = "header">
 
         <a href = "index.html">
-            <button> Blog </button>
+            <button class = "pressable"> Blog </button>
         </a>
 
         <a href = "quizz.html">
-            <button> Quizz </button>
+            <button class = "pressable"> Quizz </button>
         </a>
 
-        <a href = "quizz-maker.html">
-            <button> Quizz Maker </button>
+        <a href = "list-maker.html">
+            <button class = "pressable"> List Maker </button>
         </a>
 
-    </header>
-
-
-    <div class = "main">
-        <div class = "post1">
-            <h1> Scott is a tortured poet! </h1>
-            <object data = "txt/fnaf6endingspeech.txt"> </object>
-        </div>
     </div>
 
+    <div id = "main">
+        <script>
+            window.onload = function() {
+                var main = document.getElementById('main');
+                var header = document.getElementById('header');
+                var headerHeight = header.clientHeight;
+                main.style.marginTop = headerHeight + 'px';
+            };
+        </script>
+
+        <div class = "outer">
+            <div class = "inner">
+                <h2>Cutting corners</h2>
+                <h1>Literally</h1>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>

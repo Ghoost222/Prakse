@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(30, 39, 50);
+    display: flex;
+    padding-top: 5%;
+}
+
+.header {
+    position: fixed;
+    background-color: black;
+    color: white;
+
+    padding: 1%;
+    width: 100%;
+    height: auto;
+
+    top: 0;
+    align-items: center;
+    display: flex;
+    margin: 0;
+
+    a {
+        margin-left: 2%;
+
+        button{
+            background-color: transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+        
+            color: white;
+            font-size: 2rem;
+            font-family: "GlitchGoblin";
+        
+            float: left;
+        }
+
+        button:hover {
+            border: transparent;
+            border-bottom: 1px solid white;
+            color: white;
+            /*text-shadow: 5px 0 rgb(201, 50, 50),  -5px 0 rgb(50, 158, 201);*/
+            text-shadow: 5px 0 red,  -5px 0 cyan;
+        }
+    }
+}
+
+
+
+
+
+.main {
+    top: 0;
+    margin-top: 0%;
+    font-family: "JetBrains Mono";
+
+}
+
+.post2 {
+    margin: 2%;
+    padding-bottom: 3%;
+    float: left;
+
+    width: 65%;
+    height: auto;
+
+    border: transparent;
+    border-bottom: 2px solid rgb(100, 100, 100);
+    background-color: transparent;
+    
+    color: white;
+    text-align: center;
+
+    img {
+        width: 80%;
+    }
+}
+
+.post3 {
+    margin: 2%;
+    padding-bottom: 3%;
+    float: left;
+
+    width: 65%;
+    height: auto;
+
+    border: transparent;
+    border-bottom: 2px solid rgb(100, 100, 100);
+    background-color: transparent;
+
+    color: white;
+    text-align: center;
+}

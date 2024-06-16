@@ -5,67 +5,81 @@
   <meta charset = "UTF-8">
   <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
   <link href = "CSS/styleV1.css" rel = "stylesheet">
+  <link href="fonts.css" rel="stylesheet">
   <title> Blog </title>
-
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-  <!--font-family: "JetBrains Mono", monospace;-->
-  
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-  <!--font-family: "Oblivion";-->
-
 </head>
 
 <body>
-    <header class = "header">
+    <div class = "header" id = "header">
 
         <a href = "index.html">
-            <button> Blog </button>
+            <button onmouseover = "grade(this)" onmouseout="ungrade(this)"> Blog </button>
         </a>
 
         <a href = "quizz.html">
-            <button> Quizz </button>
+            <button onmouseover = "grade(this)" onmouseout="ungrade(this)"> Quizz </button>
         </a>
 
-        <a href = "quizz-maker.html">
-            <button> List Maker </button>
+        <a href = "list-maker.html">
+            <button onmouseover="grade(this)" onmouseout="ungrade(this)"> List Maker </button>
         </a>
 
-    </header>
+        <script>
+            function grade(elem) {
+                //elem.style.backgroundImage = 'linear-gradient(to bottom, #e07bda, #b65fc8, #8547b0, #573299, #2c2081, #121c69, #090E35, transparent)';
+            }
+
+            function ungrade(elem) {
+                elem.style.backgroundImage = 'none';
+            }
+        </script>
+
+    </div>
 
 
-    <div class = "main">
+    <div class = "main" id = "main">
+        <script>
+            window.onload = function() {
+                var main = document.getElementById('main');
+                var header = document.getElementById('header');
+                var headerHeight = header.clientHeight;
+                main.style.marginTop = headerHeight + 'px';
+
+                var div = document.getElementById('fnaf');
+                var width = div.clientWidth;
+                var height = (width / 16) * 9;
+                div.style.height = height + 'px';
+            };
+        </script>
+
         <div class = "post1">
             <h1> Scott is a tortured poet! </h1>
-            <object type = "text/html" data = "txt/fnaf6endingspeech.html" id = "fnaf"> </object>
-
-            <script>
-                window.onload = function() {
-                    var div = document.getElementById('fnaf');
-                    var width = div.clientWidth;
-                    var height = (width / 16) * 9;
-                    div.style.height = height + 'px';};
-            </script>
+            <div class = "outer" style = "--border-color: black; width: 100%; transform: translate(0%);">
+                <div class = "inner">
+                    <object type = "text/html" data = "txt/fnaf6endingspeech.html" id = "fnaf"> </object>
+                </div>
+            </div>
         </div>
 
         <div class = "post2">
-            <h1> Hero </h1>
-            <img src = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1ea08e12-847b-4c43-8433-ff86b833fd7b/dg2rw96-93b17639-aef4-42dd-a99f-56620a634753.jpg/v1/fit/w_640,h_480,q_70,strp/osaka_ayumu_kasuga__azumanga_daioh____by_blue_leader97_dg2rw96-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDgwIiwicGF0aCI6IlwvZlwvMWVhMDhlMTItODQ3Yi00YzQzLTg0MzMtZmY4NmI4MzNmZDdiXC9kZzJydzk2LTkzYjE3NjM5LWFlZjQtNDJkZC1hOTlmLTU2NjIwYTYzNDc1My5qcGciLCJ3aWR0aCI6Ijw9NjQwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.bYmtqWHhH9DHQVYDXvZp04eiXw892z_yO7xIeqFy67Y">
-        </div>
-
-        <div class = "post3">
-            <h1> I FUCKING LOVE LEYLEY COSPLAYS </h1>
-            <blockquote class="twitter-tweet tw-align-center" data-theme="dark"><p lang="en" dir="ltr">You chose to do it, and you chose me 💀 <a href="https://t.co/rrlJiSKNnV">pic.twitter.com/rrlJiSKNnV</a></p>&mdash; Saruei 💥 (@Saruei_) <a href="https://twitter.com/Saruei_/status/1771304893539611015?ref_src=twsrc%5Etfw">March 22, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-
-        <div class = "post3">
-            <h1> This is that armpit girl </h1>
-            <blockquote class="twitter-tweet tw-align-center" data-theme="dark"> <p lang="en" dir="ltr">Let me empathize with you more ✂️ <a href="https://t.co/ETxPbQA9QZ">pic.twitter.com/ETxPbQA9QZ </a> </p>&mdash; Saruei 💥 (@Saruei_) <a href="https://twitter.com/Saruei_/status/1772730404627210408?ref_src=twsrc%5Etfw"> March 26, 2024 </a> </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"> </script>
+            <div class = "outer" style = "--border-color: rgb(119, 46, 119);">
+                <div class = "inner">
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJ3NnNnZTVzcW0wdnd4YXJ1aGw2djVkcjFrb2ppd2U3Z2d1ZTBtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QTxF50wnvVaXDU3IJQ/giphy.webp">
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class = "side-main">
+    <footer>
+        <pre>
+<h1> Pēdgalis </h1>
+<h3> Author: My ass </h3>
 
-    </div>
 
+<h1><a href="dungeon/level.html"> S̵̡̬̮̠͚̹̪̎̋͝é̶͚̒͆̓̌́̑̋͐͗͗̉̕̕͝c̴̼̬̓͆̀̉̀̑̑͊̎͋̚̚͝͠r̵̢͙̜͉͉̳̟̻̣̟͉̞̮̽͆͆̏̄̍̈́̆͊̂͘̚̚̚͠e̵͚̥̣̪͖͓̽͌̅͌͋̓̿̊͛͠͝t̴̜̟̮͕̗̖̺̊̿͝s̶̡̧̧͍͓̥̼̍̓ </a></h1>
+
+
+        </pre>
+    </footer>
 </body>
 </html>
