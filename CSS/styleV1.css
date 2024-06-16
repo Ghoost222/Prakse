@@ -120,7 +120,7 @@ body {
 }
 
 .outer {
-    --corner-cuts: 50px;
+    --corner-cuts: 2rem;
     --border-thicknes: 0.2rem;
     --border-color: #c2c447;
     --background-color: black;
@@ -187,4 +187,5 @@ footer {
 
     width: 100%;
     height: auto;
+    bottom: 0;
 }
