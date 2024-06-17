@@ -10,20 +10,78 @@
 </head>
 
 <body>
-    <header class = "header">
+    <div class = "header" id = "header">
 
         <a href = "index.html">
-            <button class = "pressable"> Blog </button>
+            <button onmouseover = "grade(this)" onmouseout="ungrade(this)"> Blog </button>
         </a>
 
         <a href = "quizz.html">
-            <button class = "pressable"> Quizz </button>
+            <button onmouseover = "grade(this)" onmouseout="ungrade(this)"> Quizz </button>
         </a>
 
         <a href = "list-maker.html">
-            <button class = "pressable"> List Maker </button>
+            <button onmouseover="grade(this)" onmouseout="ungrade(this)"> List Maker </button>
         </a>
 
-    </header>
+        <script>
+            function grade(elem) {
+                //elem.style.backgroundImage = 'linear-gradient(to bottom, #e07bda, #b65fc8, #8547b0, #573299, #2c2081, #121c69, #090E35, transparent)';
+            }
+
+            function ungrade(elem) {
+                elem.style.backgroundImage = 'none';
+            }
+        </script>
+
+    </div>
+
+
+    <div class = "main" id = "main">
+        <script>
+            window.onload = function() {
+                var main = document.getElementById('main');
+                var header = document.getElementById('header');
+                var headerHeight = header.clientHeight;
+                main.style.marginTop = headerHeight + 'px';
+            };
+        </script>
+
+        <div class = "outer">
+
+            <div class = "inner">
+                <p> U_U </p>
+                <p> >_< </p>
+                <p> O_O </p>
+
+                <div id = "clock-holder">
+                    <p id = "clock"> ##-##-## </p>
+                </div>
+
+                <script>
+                    function startTime() {
+                        const today = new Date();
+                        let h = today.getHours();
+                        let m = today.getMinutes();
+                        let s = today.getSeconds();
+                        m = checkTime(m);
+                        s = checkTime(s);
+                        document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+                        setTimeout(startTime, 1000);
+                    }
+
+                    function checkTime(i) {
+                        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                        return i;
+                    }
+
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                        startTime();
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

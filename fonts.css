@@ -2,8 +2,34 @@
 
 @font-face {font-family: "GameBoy"; src: url('fonts/GameBoy.ttf');}
 
-@font-face {font-family: "BPB"; src: url('fonts/BlenderProBook.otf');}
+@font-face {font-family: "BlenderProBook"; src: url('fonts/BlenderProBook.otf');}
 
 @font-face {font-family: "JetBrainsMono"; src: url('fonts/JetBrainsMono.ttf');}
 
 @font-face {font-family: "Orbitron"; src: url('fonts/Orbitron.ttf');}
+
+@font-face {font-family: "Fnaf"; src: url('fonts/Fnaf.ttf');}
+
+@font-face {font-family: "Aexir"; src: url('fonts/Aexir.otf');}
+
+@font-face {font-family: "Procyton"; src: url('fonts/Procyon/Procyon.ttf');}
+
+@font-face {font-family: "JlsDataGothicCnc"; src: url('fonts/JlsDataGothic/JlsdatagothicCnc.otf');}
+
+@font-face {font-family: "Zeroes"; src: url('fonts/Zeroes/ZeroesOne.otf');}
+
+@font-face {font-family: "LoveLetter"; src: url('fonts/LoveLetter.ttf');}
+
+@font-face {font-family: "Prototype"; src: url('fonts/Prototype.ttf');}
+
+@font-face {font-family: "RabidScience"; src: url('fonts/RabidScience.ttf');}
+
+@font-face {font-family: "Th3Machine"; src: url('fonts/Th3Machine.ttf');}
+
+@font-face {font-family: "FutureImperfect"; src: url('fonts/FutureImperfect.ttf');}
+
+@font-face {font-family: "Kerox"; src: url('fonts/Kerox.otf');}
+
+@font-face {font-family: "Sector017"; src: url('fonts/Sector017.ttf');} 
+/*Not working! Almost feels liek this font is hated by the whole internet, yet there are thousends of pages to download it from...*/
+

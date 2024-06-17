@@ -8,17 +8,27 @@ body {
 
 .header {
     position: fixed;
-    background-color: black;
     color: white;
 
     padding: 1%;
     width: 100%;
     height: auto;
+    top:0;
 
-    top: 0;
     align-items: center;
     display: flex;
-    margin: 0;
+    z-index: 1;
+
+    background-color: black;
+    background-image: linear-gradient(to left, #e07bda, #b65fc8, #8547b0, #573299, #2c2081, #121c69, #090E35, transparent);
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    /*background-image: url('https://www.shecodes.io/assets/backgrounds/vectors-68d3246d3ce91acc9d2cea09a5a41aa072c9b3df4cfc2904028ff7c5c6428d44.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 100%;*/
 
     a {
         margin-left: 2%;
@@ -27,6 +37,7 @@ body {
             background-color: transparent;
             background-repeat: no-repeat;
             border: none;
+            border-bottom: 1px solid transparent;
             cursor: pointer;
             overflow: hidden;
             outline: none;

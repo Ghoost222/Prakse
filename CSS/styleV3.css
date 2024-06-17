@@ -1,23 +1,38 @@
-body {
-    margin: 0;
+html body {
     padding: 0;
-    background: rgb(30, 39, 50);
+    margin: 0;
+    background-color: rgb(30, 39, 50);
+    height: 100%;
+}
+
+body {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .header {
     position: fixed;
-    background-color: black;
     color: white;
 
     padding: 1%;
     width: 100%;
     height: auto;
+    top:0;
 
-    top: 0;
     align-items: center;
     display: flex;
-    margin: 0;
+    z-index: 1;
+
+    background-color: black;
+    background-image: linear-gradient(to left, #e07bda, #b65fc8, #8547b0, #573299, #2c2081, #121c69, #090E35, transparent);
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    /*background-image: url('https://www.shecodes.io/assets/backgrounds/vectors-68d3246d3ce91acc9d2cea09a5a41aa072c9b3df4cfc2904028ff7c5c6428d44.png');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 100%;*/
 
     a {
         margin-left: 2%;
@@ -26,6 +41,7 @@ body {
             background-color: transparent;
             background-repeat: no-repeat;
             border: none;
+            border-bottom: 1px solid transparent;
             cursor: pointer;
             overflow: hidden;
             outline: none;
@@ -40,7 +56,68 @@ body {
         button:hover {
             border: transparent;
             border-bottom: 1px solid white;
+            color: white;
+            /*text-shadow: 5px 0 rgb(201, 50, 50),  -5px 0 rgb(50, 158, 201);*/
             text-shadow: 5px 0 red,  -5px 0 cyan;
         }
     }
+}
+
+.main {
+    font-family: "JetBrainsMono";
+    width: 50%;
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+.outer {
+    --corner-cuts: 2rem;
+    --border-thicknes: 3px;
+    --border-color: white;
+    --background-color: black;
+    color: white;
+
+    clip-path: polygon(0 0,    100% 0,    100% calc(100% - var(--corner-cuts)),    calc(20% + var(--corner-cuts)) calc(100% - var(--corner-cuts)),    20% 100%,    0 100%);
+
+    margin-top: 5%;
+    padding: 0;
+    width: 100%;
+
+    .inner {
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+
+        text-align: center;
+
+        margin: 0;  
+        padding: 0;
+        height: 100%;
+        position: relative;
+    }
+
+    .inner::after {
+        content: "";
+        position: absolute;
+        border-left: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid var(--border-color);
+
+        bottom: 0;
+        right: 0;
+        width: calc(80% - var(--corner-cuts) + var(--border-thicknes));
+    }
+}
+
+#clock-holder {
+    height: var(--corner-cuts);
+    width: calc(20% + var(--corner-cuts));
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0;
+    font-family: "BlenderProBook";
+    font-size: 1.5em;
+    font-weight: bolder;
 }

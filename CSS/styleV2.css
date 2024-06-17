@@ -19,6 +19,8 @@ body {
     display: flex;
     margin: 0;
 
+    z-index: 1;
+
     a {
         margin-left: 2%;
 
@@ -55,41 +57,60 @@ body {
 }
 
 .outer {
-    clip-path: polygon(
-        16px 0,
-        100% 0,
+    --corner-cuts: 2rem;
+    --border-thicknes: 0.2rem;
+    --border-color: white;
+    --background-color: black;
 
-        100% calc(100% - 16px), 
-        calc(100% - 16px) 100%,
+    clip-path: polygon(var(--corner-cuts) 0,    100% 0,    100% calc(100% - var(--corner-cuts)),    calc(100% - var(--corner-cuts)) 100%,    0 100%,    0 var(--corner-cuts));
 
-        0 100%, 
-        0 16px);
-
-    position: relative;
     margin-top: 5%;
-    
-    height: auto;
-    width: 30%;
+    padding: 0;
+    width: 50%;
+    transform: translate(0%); /* Basically this line center the box */
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    object {
+        width: 100%;
+        display: block;
+    }
 
     .inner {
         color: white;
-        background: black;
-        border: 2px solid #b9b000;
-        margin: 0;
-        padding-left: 2%;
-
-        list-style: none;
-        position: relative;
-        z-index: 1;
-
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
         text-align: center;
+
+        margin: 0;  
+        padding: 0;
+        position: relative;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            font-family: "BlenderProBook";
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--border-color);
+            color: black;
+            font-weight: bold;
+        }
     }
 
     .inner::before {
         content: "";
         position: absolute;
-        border-right: 16px solid transparent;
-        border-top: 16px solid #b9b000;
+        border-right: var(--corner-cuts) solid transparent;
+        border-top: var(--corner-cuts) solid var(--border-color);
 
         width: 0%;
         left: 0;
@@ -99,8 +120,8 @@ body {
     .inner::after {
         content: "";
         position: absolute;
-        border-left: 16px solid transparent;
-        border-bottom: 16px solid #b9b000;
+        border-left: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid var(--border-color);
 
         width: 0%;
         bottom: 0;

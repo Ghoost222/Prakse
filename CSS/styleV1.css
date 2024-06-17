@@ -40,6 +40,7 @@ body {
         button{
             background-color: transparent;
             background-repeat: no-repeat;
+
             border: none;
             border-bottom: 1px solid transparent;
             cursor: pointer;
@@ -51,13 +52,17 @@ body {
             font-family: "GlitchGoblin";
         
             float: left;
+
+            cursor: pointer;
+            transition: background 0.5s ease;
+
         }
 
         button:hover {
             border: transparent;
             border-bottom: 1px solid white;
             color: white;
-            /*text-shadow: 5px 0 rgb(201, 50, 50),  -5px 0 rgb(50, 158, 201);*/
+            /*background-image: linear-gradient(to top, #1596bd, transparent);*/
             text-shadow: 5px 0 red,  -5px 0 cyan;
         }
     }
@@ -180,7 +185,7 @@ body {
 footer {
     font-family: "JetBrainsMono";
     background-color: black;
-    color:white;
+    color: white;
     text-align: center;
 
     display:block;
