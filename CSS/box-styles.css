@@ -1,0 +1,328 @@
+#bottom-left-lip-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 3px;
+    --border-color: white;
+    --background-color: black;
+    --lip-width: 10%;
+    color: white;
+
+    clip-path: polygon(
+        0 0,    
+        100% 0,    
+        100% calc(100% - var(--corner-cuts)),    
+        calc(var(--lip-width) + var(--corner-cuts)) calc(100% - var(--corner-cuts)),    
+        var(--lip-width) 100%,    
+        0 100%
+    );
+
+    margin-top: 5%;
+    padding: 0;
+
+    #bottom-left-lip-box-inner {
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+        outline: var(--border-color) solid var(--border-thicknes);
+        box-shadow: inset calc(var(--border-thicknes) * 3) 0 0 0 var(--background-color), inset calc(var(--border-thicknes) * 4) 0 0 0 var(--border-color);
+
+        text-align: center;
+
+        margin: 0;  
+        padding-bottom: var(--corner-cuts);
+        height: 100%;
+        position: relative;
+    }
+
+    #bottom-left-lip-box-inner::after {
+        content: "";
+        position: absolute;
+        border-left: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid var(--border-color);
+
+        bottom: 0;
+        right: 0;
+        width: calc(100% - var(--lip-width) - var(--corner-cuts) + 1px + var(--border-thicknes));
+    }
+}
+
+
+
+
+
+#cut-corner-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+
+    clip-path: polygon(var(--corner-cuts) 0,    100% 0,    100% calc(100% - var(--corner-cuts)),    calc(100% - var(--corner-cuts)) 100%,    0 100%,    0 var(--corner-cuts));
+
+    padding: 0;
+    transform: translate(0%); /* Basically this line center the box */
+
+    #cut-corner-box-inner {
+        color: white;
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+        text-align: center;
+
+        margin: 0;  
+        padding: 0;
+        position: relative;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            font-family: "BlenderProBook";
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--border-color);
+            color: black;
+            font-weight: bold;
+        }
+
+        object {
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    #cut-corner-box-inner::before {
+        content: "";
+        position: absolute;
+        border-right: var(--corner-cuts) solid transparent;
+        border-top: var(--corner-cuts) solid var(--border-color);
+
+        width: 0%;
+        left: 0;
+        top: 0;
+    }
+
+    #cut-corner-box-inner::after {
+        content: "";
+        position: absolute;
+        border-left: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid var(--border-color);
+
+        width: 0%;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+
+
+
+
+#top-middle-lip-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+    --lip-width: 50%;
+    color: white;
+
+    clip-path: polygon(
+        0 var(--corner-cuts),    
+        calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts)) var(--corner-cuts),    
+        calc(calc(100% - var(--lip-width)) / 2) 0,    
+        calc(100% - calc(calc(100% - var(--lip-width)) / 2)) 0,    
+        calc(100% - calc(calc(100% - var(--lip-width)) / 2) + var(--corner-cuts)) var(--corner-cuts),
+        100% var(--corner-cuts),
+        100% 100%,
+        0 100%
+    );
+
+    margin-top: 5%;
+    padding: 0;
+    width: 50%;
+
+    #top-middle-lip-box-inner {
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+
+        text-align: center;
+
+        margin: 0;  
+        padding-top: var(--corner-cuts);
+        position: relative;
+    }
+
+    #top-middle-lip-box-inner::before {
+        content: "";
+        position: absolute;
+        border-right: var(--corner-cuts) solid transparent;
+        border-top: var(--corner-cuts) solid var(--border-color);
+
+        top: 0;
+        left: 0;
+        width: calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts));
+    }
+
+    #top-middle-lip-box-inner::after {
+        content: "";
+        position: absolute;
+        border-left: var(--corner-cuts) solid transparent;
+        border-top: var(--corner-cuts) solid var(--border-color);
+
+        top: 0;
+        right: 0;
+        width: calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts));
+    }
+}
+
+
+
+
+
+#single-cut-corner-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+
+    clip-path: polygon(
+        var(--corner-cuts) 0,    
+        100% 0,    
+        100% calc(100% - var(--corner-cuts)),    
+        calc(100% - var(--corner-cuts)) 100%,   
+        0 100%,    
+        0 var(--corner-cuts)
+        );
+
+    margin-top: 5%;
+    padding: 0;
+    width: 50%;
+    transform: translate(0%); /* Basically this line center the box */
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    object {
+        width: 100%;
+        display: block;
+    }
+
+    #single-cut-corner-box-inner {
+        color: white;
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+        text-align: center;
+
+        margin: 0;  
+        padding: 0;
+        position: relative;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            font-family: "BlenderProBook";
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--border-color);
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    #single-cut-corner-box-inner::after {
+        content: "";
+        position: absolute;
+        border-left: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid var(--border-color);
+
+        width: 0%;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+
+
+
+
+#top-bottom-middle-inner-lip-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+    --lip-width: 50%;
+    color: white;
+
+    clip-path: polygon(
+        0 0,    
+        calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts)) 0,    
+        calc(calc(100% - var(--lip-width)) / 2) var(--corner-cuts),    
+        calc(100% - calc(calc(100% - var(--lip-width)) / 2)) var(--corner-cuts),    
+        calc(100% - calc(calc(100% - var(--lip-width)) / 2) + var(--corner-cuts)) 0,
+        100% 0,
+
+        100% 100%,
+        calc(100% - calc(calc(100% - var(--lip-width)) / 2) + var(--corner-cuts)) 100%,
+        calc(100% - calc(calc(100% - var(--lip-width)) / 2)) calc(100% - var(--corner-cuts)),
+        calc(calc(100% - var(--lip-width)) / 2) calc(100% - var(--corner-cuts)),  
+        calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts)) 100%,    
+        0 100%
+    );
+
+    margin-top: 5%;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    #top-bottom-middle-inner-lip-box-inner {
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+
+        text-align: center;
+
+        margin: 0;  
+        padding-top: var(--corner-cuts);
+        padding-bottom: var(--corner-cuts);
+        position: relative;
+
+        height: 100%;
+    }
+
+    #top-bottom-middle-inner-lip-box-inner::before {
+        content: "";
+        position: absolute;
+        border-right: var(--corner-cuts) solid transparent;
+        border-left: var(--corner-cuts) solid transparent;
+        border-top: var(--corner-cuts) solid var(--border-color);
+
+        top: 0;
+        left: calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts) - var(--border-thicknes));
+        width: calc(var(--lip-width) + var(--border-thicknes) * 2);
+    }
+
+    #top-bottom-middle-inner-lip-box-inner::after {
+        content: "";
+        position: absolute;
+        border-right: var(--corner-cuts) solid transparent;
+        border-left: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid var(--border-color);
+
+        bottom: 0;
+        left: calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts) - var(--border-thicknes));
+        width: calc(var(--lip-width) + var(--border-thicknes) * 2);
+    }
+}

@@ -65,59 +65,37 @@ body {
 
 .main {
     font-family: "JetBrainsMono";
-    width: 50%;
+    width: 100%;
     height: auto;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
-}
 
-.outer {
-    --corner-cuts: 2rem;
-    --border-thicknes: 3px;
-    --border-color: white;
-    --background-color: black;
-    color: white;
-
-    clip-path: polygon(0 0,    100% 0,    100% calc(100% - var(--corner-cuts)),    calc(20% + var(--corner-cuts)) calc(100% - var(--corner-cuts)),    20% 100%,    0 100%);
-
-    margin-top: 5%;
-    padding: 0;
-    width: 100%;
-
-    .inner {
-        background: var(--background-color);
-        border: var(--border-thicknes) solid var(--border-color);
-
-        text-align: center;
-
-        margin: 0;  
-        padding: 0;
-        height: 100%;
-        position: relative;
-    }
-
-    .inner::after {
-        content: "";
-        position: absolute;
-        border-left: var(--corner-cuts) solid transparent;
-        border-bottom: var(--corner-cuts) solid var(--border-color);
-
-        bottom: 0;
-        right: 0;
-        width: calc(80% - var(--corner-cuts) + var(--border-thicknes));
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 #clock-holder {
-    height: var(--corner-cuts);
-    width: calc(20% + var(--corner-cuts));
     bottom: 0;
     left: 0;
-    background: rgb(0, 0, 0);
+    width: 10%;
+
     text-align: center;
-    padding: 0;
+    align-items: center;
+
+    background: transparent;
     font-family: "BlenderProBook";
     font-size: 1.5em;
     font-weight: bolder;
+
+    #clock {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        background: none;
+        color: inherit;
+        border: none;
+    }
 }

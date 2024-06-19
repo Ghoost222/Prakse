@@ -4,7 +4,10 @@
 <head>
   <meta charset = "UTF-8">
   <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/icon3.png">
+  
   <link href = "CSS/styleV3.css" rel = "stylesheet">
+  <link href = "CSS/box-styles.css" rel = "stylesheet">
   <link href = "fonts.css" rel = "stylesheet">
   <title> List Maker </title>
 </head>
@@ -13,26 +16,16 @@
     <div class = "header" id = "header">
 
         <a href = "index.html">
-            <button onmouseover = "grade(this)" onmouseout="ungrade(this)"> Blog </button>
+            <button> Blog </button>
         </a>
 
         <a href = "quizz.html">
-            <button onmouseover = "grade(this)" onmouseout="ungrade(this)"> Quizz </button>
+            <button> Quizz </button>
         </a>
 
         <a href = "list-maker.html">
-            <button onmouseover="grade(this)" onmouseout="ungrade(this)"> List Maker </button>
+            <button> List Maker </button>
         </a>
-
-        <script>
-            function grade(elem) {
-                //elem.style.backgroundImage = 'linear-gradient(to bottom, #e07bda, #b65fc8, #8547b0, #573299, #2c2081, #121c69, #090E35, transparent)';
-            }
-
-            function ungrade(elem) {
-                elem.style.backgroundImage = 'none';
-            }
-        </script>
 
     </div>
 
@@ -47,15 +40,14 @@
             };
         </script>
 
-        <div class = "outer">
-
-            <div class = "inner">
+        <div id = "bottom-left-lip-box" style="position: relative; width: 100%;">
+            <div id = "bottom-left-lip-box-inner" >
                 <p> U_U </p>
                 <p> >_< </p>
                 <p> O_O </p>
 
-                <div id = "clock-holder">
-                    <p id = "clock"> ##-##-## </p>
+                <div id = "clock-holder" style="position: absolute;">
+                    <button id = "clock"> ##:##:## </button>
                 </div>
 
                 <script>
@@ -79,6 +71,52 @@
                         startTime();
                     });
                 </script>
+            </div>
+        </div>
+
+        <div id = "cut-corner-box" style="width: 40%;">
+            <div id = "cut-corner-box-inner">
+                <p style="font-size: 2rem; font-family: 'GlitchGoblin';"> GlitchGoblin </p>
+                <p style="font-size: 2rem; font-family: 'GameBoy';"> GameBoy </p>
+                <p style="font-size: 2rem; font-family: 'BlenderProBook';"> Blender Pro Book </p>
+                <p style="font-size: 2rem; font-family: 'JetBrainsMono';"> Jet Brains Mono </p>
+                <p style="font-size: 2rem; font-family: 'Orbitron';"> Orbitron </p>
+                <p style="font-size: 2rem; font-family: 'Fnaf';"> Fnaf </p>
+                <p style="font-size: 2rem; font-family: 'Aexir';"> Aexir </p>
+                <p style="font-size: 2rem; font-family: 'Procyton';"> Procyton </p>
+                <p style="font-size: 2rem; font-family: 'JlsDataGothicCnc';"> Jls Data Gothic Cnc </p>
+                <p style="font-size: 2rem; font-family: 'Zeroes';"> Zeroes </p>
+                <p style="font-size: 2rem; font-family: 'ZeroesTwo';"> Zeroes Two </p>
+                <p style="font-size: 2rem; font-family: 'ZeroesThree';"> Zeroes Three </p>
+                <p style="font-size: 2rem; font-family: 'LoveLetter';"> Love Letter (lain) </p>
+                <p style="font-size: 2rem; font-family: 'Prototype';"> Prototype </p>
+                <p style="font-size: 2rem; font-family: 'RabidScience';"> Rabid Science </p>
+                <p style="font-size: 2rem; font-family: 'Th3Machine';"> Th3 Machine </p>
+                <p style="font-size: 2rem; font-family: 'FutureImperfect';"> Future Imperfect </p>
+                <p style="font-size: 2rem; font-family: 'Kerox';"> Kerox </p>
+            </div>
+        </div>
+
+        <div id = "cut-corner-box" style="width: 40%;">
+            <div id = "cut-corner-box-inner">
+                <p style="font-size: 2rem; font-family: 'GlitchGoblin';"> GlitchGoblin </p>
+                <p style="font-size: 2rem; font-family: 'GameBoy';"> GameBoy </p>
+                <p style="font-size: 2rem; font-family: 'BlenderProBook';"> Blender Pro Book </p>
+                <p style="font-size: 2rem; font-family: 'JetBrainsMono';"> Jet Brains Mono </p>
+                <p style="font-size: 2rem; font-family: 'Orbitron';"> Orbitron </p>
+                <p style="font-size: 2rem; font-family: 'Fnaf';"> Fnaf </p>
+                <p style="font-size: 2rem; font-family: 'Aexir';"> Aexir </p>
+                <p style="font-size: 2rem; font-family: 'Procyton';"> Procyton </p>
+                <p style="font-size: 2rem; font-family: 'JlsDataGothicCnc';"> Jls Data Gothic Cnc </p>
+                <p style="font-size: 2rem; font-family: 'Zeroes';"> Zeroes </p>
+                <p style="font-size: 2rem; font-family: 'ZeroesTwo';"> Zeroes Two </p>
+                <p style="font-size: 2rem; font-family: 'ZeroesThree';"> Zeroes Three </p>
+                <p style="font-size: 2rem; font-family: 'LoveLetter';"> Love Letter (lain) </p>
+                <p style="font-size: 2rem; font-family: 'Prototype';"> Prototype </p>
+                <p style="font-size: 2rem; font-family: 'RabidScience';"> Rabid Science </p>
+                <p style="font-size: 2rem; font-family: 'Th3Machine';"> Th3 Machine </p>
+                <p style="font-size: 2rem; font-family: 'FutureImperfect';"> Future Imperfect </p>
+                <p style="font-size: 2rem; font-family: 'Kerox';"> Kerox </p>
             </div>
         </div>
     </div>

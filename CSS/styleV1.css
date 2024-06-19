@@ -48,7 +48,7 @@ body {
             outline: none;
         
             color: white;
-            font-size: 2rem;
+            font-size: 2em;
             font-family: "GlitchGoblin";
         
             float: left;
@@ -95,7 +95,6 @@ body {
     text-align: center;
 
     object {
-        width: 90%;
         color: white;
         background-color: white;
         margin: 0%;
@@ -124,73 +123,12 @@ body {
     }
 }
 
-.outer {
-    --corner-cuts: 2rem;
-    --border-thicknes: 0.2rem;
-    --border-color: #c2c447;
-    --background-color: black;
-
-    clip-path: polygon(var(--corner-cuts) 0,    100% 0,    100% calc(100% - var(--corner-cuts)),    calc(100% - var(--corner-cuts)) 100%,    0 100%,    0 var(--corner-cuts));
-
-    margin-top: 5%;
-    padding: 0;
-    width: 50%;
-    transform: translate(50%); /* Basically this line center the box */
-
-    img {
-        width: 100%;
-        display: block;
-    }
-
-    object {
-        width: 100%;
-        display: block;
-    }
-
-    .inner {
-        color: white;
-        background: var(--background-color);
-        border: var(--border-thicknes) solid var(--border-color);
-        text-align: center;
-
-        margin: 0;  
-        padding: 0;
-        position: relative;
-    }
-
-    .inner::before {
-        content: "";
-        position: absolute;
-        border-right: var(--corner-cuts) solid transparent;
-        border-top: var(--corner-cuts) solid var(--border-color);
-
-        width: 0%;
-        left: 0;
-        top: 0;
-    }
-
-    .inner::after {
-        content: "";
-        position: absolute;
-        border-left: var(--corner-cuts) solid transparent;
-        border-bottom: var(--corner-cuts) solid var(--border-color);
-
-        width: 0%;
-        bottom: 0;
-        right: 0;
-    }
-}
-
-
-footer {
+#footer {
     font-family: "JetBrainsMono";
     background-color: black;
     color: white;
     text-align: center;
 
-    display:block;
-
     width: 100%;
-    height: auto;
     bottom: 0;
 }

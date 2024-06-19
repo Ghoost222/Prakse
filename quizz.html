@@ -4,9 +4,12 @@
 <head>
   <meta charset = "UTF-8">
   <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-  <link href = "CSS/styleV2.css" rel = "stylesheet">
-  <link href="fonts.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/icon3.png">
   <title> Quizz </title>
+
+  <link href = "CSS/styleV2.css" rel = "stylesheet">
+  <link href = "CSS/box-styles.css" rel = "stylesheet">
+  <link href="fonts.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,30 +39,59 @@
             };
         </script>
 
-        <div class = "outer" style="width: 40%;">
-            <div class = "inner">
-                <p style="font-size: 2rem; font-family: 'GlitchGoblin';"> GlitchGoblin </p>
-                <p style="font-size: 2rem; font-family: 'GameBoy';"> GameBoy </p>
-                <p style="font-size: 2rem; font-family: 'BlenderProBook';"> Blender Pro Book </p>
-                <p style="font-size: 2rem; font-family: 'JetBrainsMono';"> Jet Brains Mono </p>
-                <p style="font-size: 2rem; font-family: 'Orbitron';"> Orbitron </p>
-                <p style="font-size: 2rem; font-family: 'Fnaf';"> Fnaf </p>
-                <p style="font-size: 2rem; font-family: 'Aexir';"> Aexir </p>
-                <p style="font-size: 2rem; font-family: 'Procyton';"> Procyton </p>
-                <p style="font-size: 2rem; font-family: 'JlsDataGothicCnc';"> Jls Data Gothic Cnc </p>
-                <p style="font-size: 2rem; font-family: 'Zeroes';"> Zeroes </p>
-                <p style="font-size: 2rem; font-family: 'LoveLetter';"> Love Letter (lain) </p>
-                <p style="font-size: 2rem; font-family: 'Prototype';"> Prototype </p>
-                <p style="font-size: 2rem; font-family: 'RabidScience';"> Rabid Science </p>
-                <p style="font-size: 2rem; font-family: 'Th3Machine';"> Th3 Machine </p>
-                <p style="font-size: 2rem; font-family: 'FutureImperfect';"> Future Imperfect </p>
-                <p style="font-size: 2rem; font-family: 'Kerox';"> Kerox </p>
-            </div>
-        </div>
+        <div id = "top-bottom-middle-inner-lip-box" style="--corner-cuts: 25px; width: 100%; height: 20%; --background-color: transparent; --border-color:  #671f23;">
+            <div id = "top-bottom-middle-inner-lip-box-inner" style="display: grid; gap: 0%;">
 
-        <div class = "outer" style="width: 20%; --corner-cuts: 1.5rem;">
-            <div class = "inner">
-                <button type="button" style="font-size: 2rem;"> Button </button>
+                <div id="quizz-window" style = "padding: 0;">
+                    <script src="Scripts/quizz.js"></script>
+
+                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin: 5%;">
+                        <div id = "cut-corner-box-inner">
+                            <img src="images/Qu.webp" >
+                        </div>
+                    </div>
+
+                    <div> 
+
+                    </div>
+                </div>
+
+                <div id="button-side">
+
+                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%;">
+                        <div id = "cut-corner-box-inner">
+                            <button style="font-size: 1.2em;"> Titan </button>
+                        </div>
+                    </div>
+    
+                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin-top: 5%;">
+                        <div id = "cut-corner-box-inner">
+                            <button style="font-size: 1.2em;"> Qu </button>
+                        </div>
+                    </div>
+
+                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin-top: 5%;">
+                        <div id = "cut-corner-box-inner">
+                            <button style="font-size: 1.2em;"> Spacer </button>
+                        </div>
+                    </div>
+
+                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin-top: 5%;">
+                        <div id = "cut-corner-box-inner">
+                            <button style="font-size: 1.2em;"> Temptor </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div id = "top-middle-lip-box" style=" --corner-cuts: 1.5em;">
+                    <div id = "top-middle-lip-box-inner">
+                        <p> O_o </p>
+                        <p> o_O </p>
+                        <p> O_o </p>
+                        <p> o_O </p>
+                    </div>
+                </div>-->
+
             </div>
         </div>
 
