@@ -13,6 +13,10 @@
 @font-face {font-family: "Aexir"; src: url('fonts/Aexir.otf');}
 
 @font-face {font-family: "Procyton"; src: url('fonts/Procyon/Procyon.ttf');}
+@font-face {font-family: "ProcytonItalic"; src: url('fonts/Procyon/ProcyonItalic.ttf');}
+@font-face {font-family: "ProcytonShadow"; src: url('fonts/Procyon/ProcyonShadow.ttf');}
+@font-face {font-family: "ProcytonShadowItalic"; src: url('fonts/Procyon/ProcyonShadowItalic.ttf');}
+@font-face {font-family: "ProcytonSuperItalic"; src: url('fonts/Procyon/ProcyonSuperItalic.ttf');}
 
 @font-face {font-family: "JlsDataGothicCnc"; src: url('fonts/JlsDataGothic/JlsdatagothicCnc.otf');}
 

@@ -31,7 +31,7 @@
 
     <div id = "main">
         <script>
-            window.onload = function() {
+             window.onload = function() {
                 var main = document.getElementById('main');
                 var header = document.getElementById('header');
                 var headerHeight = header.clientHeight;
@@ -39,62 +39,155 @@
             };
         </script>
 
-        <div id = "top-bottom-middle-inner-lip-box" style="--corner-cuts: 25px; width: 100%; height: 20%; --background-color: transparent; --border-color:  #671f23;">
-            <div id = "top-bottom-middle-inner-lip-box-inner" style="display: grid; gap: 0%;">
+        <div id = "main-questionare" class = "top-bottom-middle-inner-lip-box">
+            <div class = "top-bottom-middle-inner-lip-box-inner">
+                <div id = "message-box">
 
-                <div id="quizz-window" style = "padding: 0;">
-                    <script src="Scripts/quizz.js"></script>
+                    <div id = "quest0">
 
-                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin: 5%;">
-                        <div id = "cut-corner-box-inner">
-                            <img src="images/Qu.webp" >
+                        <div id = "question">
+                            <div id = "icon-holder">
+                                <div class = "cut-corner-box">
+                                    <div class = "cut-corner-box-inner">
+                                        <div id = "icon">
+                                            <p>   ?   </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class = "right-side-top-lip-box">
+                                <div class = "right-side-top-lip-box-inner">
+                                    <p id = "question-paragraph"> ---- </p>
+                                    <div class = "cut-corner-box">
+                                        <div class = "cut-corner-box-inner">
+                                            <img id = "question-attachment" src="----">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div id = "answers">
+                            <div class = "left-side-top-lip-box">
+                                <div class = "left-side-top-lip-box-inner">
+                                    <p> Answer options </p>
+
+                                    <div id = "button-holder">
+                                        <div class = "cut-corner-box">
+                                            <div class = "cut-corner-box-inner">
+                                                <button id = "answer-button-0" onclick="answerButtonEvent(this)"> ---- </button>
+                                            </div>
+                                        </div>
+                                
+                                        <div class = "cut-corner-box">
+                                            <div class = "cut-corner-box-inner">
+                                                <button id = "answer-button-1" onclick="answerButtonEvent(this)"> ---- </button>
+                                            </div>
+                                        </div>
+                                
+                                        <div class = "cut-corner-box">
+                                            <div class = "cut-corner-box-inner">
+                                                <button id = "answer-button-2" onclick="answerButtonEvent(this)"> ---- </button>
+                                            </div>
+                                        </div>
+                                
+                                        <div class = "cut-corner-box">
+                                            <div class = "cut-corner-box-inner">
+                                                <button id = "answer-button-3" onclick="answerButtonEvent(this)"> ---- </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id = "icon-holder">
+                                <div class = "cut-corner-box">
+                                    <div class = "cut-corner-box-inner" style="padding: 0; user-select: none;">
+                                        <div id = "icon">
+                                            <p>   ...   </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "right-side-top-lip-box" style="--corner-cuts: 1vw; --background-color: transparent; --border-color: #671f23; margin-top: 1%; width: 20%;">
+            <div class = "right-side-top-lip-box-inner" style="height: 85vh; padding-left: 1vw; display: grid;">
+                <div id = "menu">
+
+                    <div class = "cut-top-right-corner-bottom-left-lip-box">
+                        <div class = "cut-top-right-corner-bottom-left-lip-box-inner">
+                            <button id = "quizz-1-button" onclick="quizzButtonClickEvent(this.id)">
+                                <h1> Programming quizz </h1>
+                                <p> 5 questions </p>
+                                <div id = "lip">
+                                    <p> SELECTED: false </p>
+                                </div>
+                            </button>
                         </div>
                     </div>
 
-                    <div> 
 
+                    <div class = "cut-top-right-corner-bottom-left-lip-box">
+                        <div class = "cut-top-right-corner-bottom-left-lip-box-inner">
+                            <button id = "quizz-2-button" onclick="quizzButtonClickEvent(this.id)">
+                                <h1> Video game quizz </h1>
+                                <p> 5 questions </p>
+                                <div id = "lip">
+                                    <p> SELECTED: false </p>
+                                </div>
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-                <div id="button-side">
+                    <div class = "cut-top-right-corner-bottom-left-lip-box">
+                        <div class = "cut-top-right-corner-bottom-left-lip-box-inner">
+                            <button id = "quizz-3-button" onclick="quizzButtonClickEvent(this.id)">
+                                <h1> "All Tomorrows" quizz </h1>
+                                <p> 5 questions </p>
+                                <div id = "lip">
+                                    <p> SELECTED: false </p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
 
-                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%;">
-                        <div id = "cut-corner-box-inner">
-                            <button style="font-size: 1.2em;"> Titan </button>
+                    <div id = "control-panel">
+
+                        <div id = "question-counter" class = "cut-corner-box">
+                            <div class = "cut-corner-box-inner">
+                                <h3 id = "point-label"> 0/5 </h3>
+                            </div>
+                        </div>
+
+                        <div id = "start-button" class = "cut-corner-box">
+                            <div class = "cut-corner-box-inner">
+                                <h3>   BEGIN  </h3>
+                            </div>
+                        </div>
+
+                        <div id = "stop-button" class = "cut-corner-box">
+                            <div class = "cut-corner-box-inner">
+                                <h3>   STOP  </h3>
+                            </div>
                         </div>
                     </div>
     
-                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin-top: 5%;">
-                        <div id = "cut-corner-box-inner">
-                            <button style="font-size: 1.2em;"> Qu </button>
-                        </div>
-                    </div>
-
-                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin-top: 5%;">
-                        <div id = "cut-corner-box-inner">
-                            <button style="font-size: 1.2em;"> Spacer </button>
-                        </div>
-                    </div>
-
-                    <div id = "cut-corner-box" style=" --corner-cuts: 15px; width: 50%; margin-top: 5%;">
-                        <div id = "cut-corner-box-inner">
-                            <button style="font-size: 1.2em;"> Temptor </button>
-                        </div>
-                    </div>
                 </div>
-
-                <!--<div id = "top-middle-lip-box" style=" --corner-cuts: 1.5em;">
-                    <div id = "top-middle-lip-box-inner">
-                        <p> O_o </p>
-                        <p> o_O </p>
-                        <p> O_o </p>
-                        <p> o_O </p>
-                    </div>
-                </div>-->
 
             </div>
         </div>
 
     </div>
+
+    <script src="Scripts/quizz.js"> </script>
 </body>
 </html>

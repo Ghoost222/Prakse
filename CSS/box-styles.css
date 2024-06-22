@@ -1,4 +1,4 @@
-#bottom-left-lip-box {
+.bottom-left-lip-box {
     --corner-cuts: 2rem;
     --border-thicknes: 3px;
     --border-color: white;
@@ -18,7 +18,7 @@
     margin-top: 5%;
     padding: 0;
 
-    #bottom-left-lip-box-inner {
+    .bottom-left-lip-box-inner {
         background: var(--background-color);
         border: var(--border-thicknes) solid var(--border-color);
         outline: var(--border-color) solid var(--border-thicknes);
@@ -32,7 +32,7 @@
         position: relative;
     }
 
-    #bottom-left-lip-box-inner::after {
+    .bottom-left-lip-box-inner::after {
         content: "";
         position: absolute;
         border-left: var(--corner-cuts) solid transparent;
@@ -48,26 +48,31 @@
 
 
 
-#cut-corner-box {
+.cut-corner-box {
     --corner-cuts: 2rem;
     --border-thicknes: 2px;
     --border-color: white;
     --background-color: black;
+    --transition-time: 1s;
+    --hover-color: var(--border-color);
 
     clip-path: polygon(var(--corner-cuts) 0,    100% 0,    100% calc(100% - var(--corner-cuts)),    calc(100% - var(--corner-cuts)) 100%,    0 100%,    0 var(--corner-cuts));
 
     padding: 0;
-    transform: translate(0%); /* Basically this line center the box */
+    transform: translate(0%);
 
-    #cut-corner-box-inner {
+    .cut-corner-box-inner {
         color: white;
         background: var(--background-color);
         border: var(--border-thicknes) solid var(--border-color);
-        text-align: center;
-
-        margin: 0;  
+        transition: var(--transition-time);
+ 
         padding: 0;
         position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
 
         button {
             width: 100%;
@@ -80,9 +85,8 @@
         }
 
         button:hover {
-            background-color: var(--border-color);
-            color: black;
-            font-weight: bold;
+            background-color: var(--hover-color);
+            transition: var(--transition-time);
         }
 
         object {
@@ -98,7 +102,7 @@
         }
     }
 
-    #cut-corner-box-inner::before {
+    .cut-corner-box-inner::before {
         content: "";
         position: absolute;
         border-right: var(--corner-cuts) solid transparent;
@@ -107,9 +111,10 @@
         width: 0%;
         left: 0;
         top: 0;
+        transition: var(--transition-time);
     }
 
-    #cut-corner-box-inner::after {
+    .cut-corner-box-inner::after {
         content: "";
         position: absolute;
         border-left: var(--corner-cuts) solid transparent;
@@ -118,6 +123,7 @@
         width: 0%;
         bottom: 0;
         right: 0;
+        transition: var(--transition-time);
     }
 }
 
@@ -186,7 +192,7 @@
 
 
 
-#single-cut-corner-box {
+.single-cut-corner-box {
     --corner-cuts: 2rem;
     --border-thicknes: 2px;
     --border-color: white;
@@ -216,7 +222,7 @@
         display: block;
     }
 
-    #single-cut-corner-box-inner {
+    .single-cut-corner-box-inner {
         color: white;
         background: var(--background-color);
         border: var(--border-thicknes) solid var(--border-color);
@@ -239,11 +245,10 @@
         button:hover {
             background-color: var(--border-color);
             color: black;
-            font-weight: bold;
         }
     }
 
-    #single-cut-corner-box-inner::after {
+    .single-cut-corner-box-inner::after {
         content: "";
         position: absolute;
         border-left: var(--corner-cuts) solid transparent;
@@ -259,7 +264,7 @@
 
 
 
-#top-bottom-middle-inner-lip-box {
+.top-bottom-middle-inner-lip-box {
     --corner-cuts: 2rem;
     --border-thicknes: 2px;
     --border-color: white;
@@ -288,7 +293,7 @@
     width: 100%;
     height: 100%;
 
-    #top-bottom-middle-inner-lip-box-inner {
+    .top-bottom-middle-inner-lip-box-inner {
         background: var(--background-color);
         border: var(--border-thicknes) solid var(--border-color);
 
@@ -302,7 +307,7 @@
         height: 100%;
     }
 
-    #top-bottom-middle-inner-lip-box-inner::before {
+    .top-bottom-middle-inner-lip-box-inner::before {
         content: "";
         position: absolute;
         border-right: var(--corner-cuts) solid transparent;
@@ -314,7 +319,7 @@
         width: calc(var(--lip-width) + var(--border-thicknes) * 2);
     }
 
-    #top-bottom-middle-inner-lip-box-inner::after {
+    .top-bottom-middle-inner-lip-box-inner::after {
         content: "";
         position: absolute;
         border-right: var(--corner-cuts) solid transparent;
@@ -324,5 +329,372 @@
         bottom: 0;
         left: calc(calc(100% - var(--lip-width)) / 2 - var(--corner-cuts) - var(--border-thicknes));
         width: calc(var(--lip-width) + var(--border-thicknes) * 2);
+    }
+}
+
+
+
+
+
+.top-left-cut-corner-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+
+    clip-path: polygon(
+        var(--corner-cuts) 0,    
+        100% 0,    
+        100% 100%  
+        0 100%,    
+        0 var(--corner-cuts));
+
+    padding: 0;
+    transform: translate(0%);
+
+    .top-left-cut-corner-box-inner {
+        color: white;
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+
+        margin: 0;  
+        padding: 0;
+        position: relative;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            font-family: "BlenderProBook";
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--border-color);
+        }
+
+        object {
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .top-left-cut-corner-box-inner::before {
+        content: "";
+        position: absolute;
+        border-right: var(--corner-cuts) solid transparent;
+        border-top: var(--corner-cuts) solid var(--border-color);
+
+        width: 0%;
+        left: 0;
+        top: 0;
+    }
+}
+
+
+
+
+.right-side-top-lip-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+    --lip-height: 10%;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,    
+        100% 100%,  
+        var(--corner-cuts) 100%,    
+        var(--corner-cuts) calc(var(--lip-height) + var(--corner-cuts)),
+        0 var(--lip-height)
+    );
+
+    padding: 0;
+    transform: translate(0%);
+
+    .right-side-top-lip-box-inner {
+        color: white;
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+
+        margin: 0;  
+        padding: 0;
+        position: relative;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            font-family: "BlenderProBook";
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--border-color);
+        }
+
+        object {
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .right-side-top-lip-box-inner::after {
+        content: "";
+        position: absolute;
+        border-left: var(--corner-cuts) solid var(--border-color);
+        border-top: var(--corner-cuts) solid transparent;
+
+        height: calc(100% - var(--lip-height) - var(--corner-cuts) + var(--border-thicknes) + 1px);
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+
+
+
+.left-side-top-lip-box {
+    --corner-cuts: 2rem;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+    --lip-height: 10%;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,    
+        100% var(--lip-height),
+        calc(100% - var(--corner-cuts)) calc(var(--lip-height) + var(--corner-cuts)),  
+        calc(100% - var(--corner-cuts)) 100%,
+        0 100%
+    );
+
+    padding: 0;
+    transform: translate(0%);
+
+    .left-side-top-lip-box-inner {
+        color: white;
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+ 
+        padding: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            font-family: "BlenderProBook";
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--border-color);
+        }
+
+        object {
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .left-side-top-lip-box-inner::after {
+        content: "";
+        position: absolute;
+        border-right: var(--corner-cuts) solid var(--border-color);
+        border-top: var(--corner-cuts) solid transparent;
+
+        height: calc(100% - var(--lip-height) - var(--corner-cuts) + var(--border-thicknes) + 1px);
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+
+
+.left-right-middle-inner-lip-box {
+    --corner-cuts: 1vw;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+    --lip-height: 40%;
+    color: white;
+
+    --outer-lip: calc(calc(100% - var(--lip-height)) / 2 - var(--corner-cuts));
+
+    padding: 0;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% var(--outer-lip),
+        calc(100% - var(--corner-cuts)) calc(var(--outer-lip) + var(--corner-cuts)),
+        calc(100% - var(--corner-cuts)) calc(100% - calc(var(--outer-lip) + var(--corner-cuts))),
+        100% calc(100% - var(--outer-lip)),
+        100% 100%,
+    
+        0 100%,
+        0 calc(100% - calc(calc(100% - var(--lip-height)) / 2) + var(--corner-cuts)),
+        var(--corner-cuts) calc(100% - calc(calc(100% - var(--lip-height)) / 2)),
+        var(--corner-cuts) calc(calc(100% - var(--lip-height)) / 2),
+        0 calc(calc(100% - var(--lip-height)) / 2 - var(--corner-cuts))
+    );
+    
+    margin-top: 5%;
+    padding: 0;
+    width: 100%;
+
+    .left-right-middle-inner-lip-box-inner {
+        color: white;
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+ 
+        padding: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    
+    .left-right-middle-inner-lip-box-inner::before {
+        content: "";
+        position: absolute;
+        border-top: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid transparent;
+        border-left: var(--corner-cuts) solid var(--border-color);
+    
+        left: 0;
+        top: calc(var(--outer-lip) - var(--border-thicknes));
+        height: calc(var(--lip-height) + calc(2 * var(--border-thicknes)));
+    }
+    
+    .left-right-middle-inner-lip-box-inner::after {
+        content: "";
+        position: absolute;
+        border-top: var(--corner-cuts) solid transparent;
+        border-bottom: var(--corner-cuts) solid transparent;
+        border-right: var(--corner-cuts) solid var(--border-color);
+    
+        right: 0;
+        top: calc(var(--outer-lip) - var(--border-thicknes));
+        height: calc(var(--lip-height) + calc(2 * var(--border-thicknes)));
+    }
+}
+
+
+
+
+.cut-top-right-corner-bottom-left-lip-box {
+    --corner-cuts: 1vw;
+    --border-thicknes: 2px;
+    --border-color: white;
+    --background-color: black;
+    --lip-width: 8vw;
+    --transition-time: 1s;
+    --hover-color: black;
+
+    clip-path: polygon(
+        0 var(--corner-cuts),    
+        0 100%,    
+        calc(var(--lip-width)) 100%,
+        calc(var(--lip-width) + var(--corner-cuts) + var(--border-thicknes))    calc(100% - var(--corner-cuts) - var(--border-thicknes)),
+        100% calc(100% - var(--corner-cuts) - var(--border-thicknes)),   
+        100% 0,
+        var(--corner-cuts) 0
+    );
+
+    padding: 0;
+    transform: translate(0%);
+
+    .cut-top-right-corner-bottom-left-lip-box-inner {
+        color: white;
+        background: var(--background-color);
+        border: var(--border-thicknes) solid var(--border-color);
+        transition: var(--transition-time);
+ 
+        padding: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        button {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            color: inherit;
+            border: none;
+            font-family: "BlenderProBook";
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--border-color);
+        }
+    }
+
+    .cut-top-right-corner-bottom-left-lip-box-inner::before {
+        content: "";
+        position: absolute;
+        border-right: var(--corner-cuts) solid transparent;
+        border-top: var(--corner-cuts) solid var(--border-color);
+
+        width: 0;
+        left: 0;
+        top: 0;
+
+        transition: var(--transition-time);
+    }
+
+    .cut-top-right-corner-bottom-left-lip-box-inner::after {
+        content: "";
+        position: absolute;
+        border-left: calc(var(--corner-cuts) + var(--border-thicknes)) solid transparent;
+        border-bottom: calc(var(--corner-cuts) + var(--border-thicknes)) solid var(--border-color);
+
+        bottom: 0;
+        right: 0;
+        width: calc(100% - var(--lip-width) - var(--corner-cuts) + var(--border-thicknes));
+        height: calc(var(--corner-cuts) + var(--border-thicknes));
+
+        transition: var(--transition-time);
     }
 }
