@@ -31,76 +31,36 @@
 
 
     <div class = "main" id = "main">
-        <script>
-            window.onload = function() {
-                var main = document.getElementById('main');
-                var header = document.getElementById('header');
-                var headerHeight = header.clientHeight;
-                main.style.marginTop = headerHeight + 'px';
-            };
-        </script>
+        <div id = "list0">
+            <div class = "left-side-top-lip-box">
+                <div class = "left-side-top-lip-box-inner">
+                    <button id = "clear-button" onclick="clearEntries()"> <p> CLEAR </p> </button>
 
-        <div class = "bottom-left-lip-box" style="position: relative; width: 100%;">
-            <div class = "bottom-left-lip-box-inner" >
-                <p> U_U </p>
-                <p> >_< </p>
-                <p> O_O </p>
+                    <div id = "tittle-card">
+                        <textarea id="text-entry" rows="2" cols="60" maxlength="100" placeholder="Max 100 symbols"></textarea>
 
-                <div id = "clock-holder" style="position: absolute;">
-                    <button id = "clock"> ##:##:## </button>
+                        <div id = "add-button">
+                            <div class = "cut-corner-box">
+                                <div class = "cut-corner-box-inner">
+                                    <button onclick="addEntry(this)"> Add </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id = "List">
+                        <div id = "listEntry-demo" class="list-entry" style="display: none;">
+                            <h2 id="entry-content"> Lets see... </h2>
+                            <button onclick = "removeEntry(this)" > X </button>
+                        </div>
+                    </div>
                 </div>
-
-                <script>
-                    function startTime() {
-                        const today = new Date();
-                        let h = today.getHours();
-                        let m = today.getMinutes();
-                        let s = today.getSeconds();
-                        m = checkTime(m);
-                        s = checkTime(s);
-                        document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
-                        setTimeout(startTime, 1000);
-                    }
-
-                    function checkTime(i) {
-                        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-                        return i;
-                    }
-
-                    document.addEventListener('DOMContentLoaded', (event) => {
-                        startTime();
-                    });
-                </script>
             </div>
         </div>
 
-        <div class = "cut-corner-box" style="width: 40%;">
-            <div class = "cut-corner-box-inner">
-                <p style="font-size: 2rem; font-family: 'GlitchGoblin';"> GlitchGoblin </p>
-                <p style="font-size: 2rem; font-family: 'GameBoy';"> GameBoy </p>
-                <p style="font-size: 2rem; font-family: 'BlenderProBook';"> Blender Pro Book </p>
-                <p style="font-size: 2rem; font-family: 'JetBrainsMono';"> Jet Brains Mono </p>
-                <p style="font-size: 2rem; font-family: 'Orbitron';"> Orbitron </p>
-                <p style="font-size: 2rem; font-family: 'Fnaf';"> Fnaf </p>
-                <p style="font-size: 2rem; font-family: 'Aexir';"> Aexir </p>
-                <p style="font-size: 2rem; font-family: 'Procyton';"> Procyton </p>
-                <p style="font-size: 2rem; font-family: 'ProcytonItalic';"> Procyton Italic </p>
-                <p style="font-size: 2rem; font-family: 'ProcytonShadow';"> Procyton Shadow </p>
-                <p style="font-size: 2rem; font-family: 'ProcytonShadowItalic';"> Procyton Shadow Italic </p>
-                <p style="font-size: 2rem; font-family: 'ProcytonSuperItalic';"> Procyton Super Italic </p>
-                <p style="font-size: 2rem; font-family: 'JlsDataGothicCnc';"> Jls Data Gothic Cnc </p>
-                <p style="font-size: 2rem; font-family: 'Zeroes';"> Zeroes </p>
-                <p style="font-size: 2rem; font-family: 'ZeroesTwo';"> Zeroes Two </p>
-                <p style="font-size: 2rem; font-family: 'ZeroesThree';"> Zeroes Three </p>
-                <p style="font-size: 2rem; font-family: 'LoveLetter';"> Love Letter (lain) </p>
-                <p style="font-size: 2rem; font-family: 'Prototype';"> Prototype </p>
-                <p style="font-size: 2rem; font-family: 'RabidScience';"> Rabid Science </p>
-                <p style="font-size: 2rem; font-family: 'Th3Machine';"> Th3 Machine </p>
-                <p style="font-size: 2rem; font-family: 'FutureImperfect';"> Future Imperfect </p>
-                <p style="font-size: 2rem; font-family: 'Kerox';"> Kerox </p>
-            </div>
-        </div>
+
     </div>
 
+    <script src="Scripts/lists.js"></script>
 </body>
 </html>

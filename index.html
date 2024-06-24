@@ -38,51 +38,78 @@
                 main.style.marginTop = headerHeight + 'px';
 
                 var div = document.getElementById('fnaf');
-                var width = div.clientWidth;
+                var width = div.parentElement.parentElement.clientWidth;
                 var height = width / 16 * 9;
                 div.style.height = height + 'px';
             };
         </script>
 
-        <div class = "post2">
-            <h1> #kms </h1>
-            <div class = "cut-corner-box" style = "--border-color: white; transform: translate(5%); --background-color: rgb(0, 0, 0); width: 90%;">
-                <div class = "cut-corner-box-inner" style="padding: 5%; text-align: left;">
+            <div id = "post4" class = "cut-corner-box">
+                <div class = "cut-corner-box-inner">
+                    <div id = "tittle-card"> These are all the fonts that have been linked and setup  </div>
+                    <div id = "column1">
+                        <p style="font-family: 'GlitchGoblin';"> GlitchGoblin </p>
+                        <p style="font-family: 'GameBoy';"> GameBoy </p>
+                        <p style="font-family: 'BlenderProBook';"> Blender Pro Book </p>
+                        <p style="font-family: 'JetBrainsMono';"> Jet Brains Mono </p>
+                        <p style="font-family: 'Orbitron';"> Orbitron </p>
+                        <p style="font-family: 'Fnaf';"> Fnaf </p>
+                        <p style="font-family: 'Aexir';"> Aexir </p>
+                        <p style="font-family: 'Procyton';"> Procyton </p>
+                        <p style="font-family: 'ProcytonItalic';"> Procyton Italic </p>
+                        <p style="font-family: 'ProcytonShadow';"> Procyton Shadow </p>
+                        <p style="font-family: 'ProcytonShadowItalic';"> Procyton Shadow Italic </p>
+                    </div>
+                    
+                    <div id = "column2">
+                        <p style="font-family: 'ProcytonSuperItalic';"> Procyton Super Italic </p>
+                        <p style="font-family: 'JlsDataGothicCnc';"> Jls Data Gothic Cnc </p>
+                        <p style="font-family: 'Zeroes';"> Zeroes </p>
+                        <p style="font-family: 'ZeroesTwo';"> Zeroes Two </p>
+                        <p style="font-family: 'ZeroesThree';"> Zeroes Three </p>
+                        <p style="font-family: 'LoveLetter';"> Love Letter (lain) </p>
+                        <p style="font-family: 'Prototype';"> Prototype </p>
+                        <p style="font-family: 'RabidScience';"> Rabid Science </p>
+                        <p style="font-family: 'Th3Machine';"> Th3 Machine </p>
+                        <p style="font-family: 'FutureImperfect';"> Future Imperfect </p>
+                        <p style="font-family: 'Kerox';"> Kerox </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "post3" class = "cut-corner-box">
+                <div class = "cut-corner-box-inner">
                     <p style="font-size: 1.5em;"> I could have just used "Augmented UI" to make "cool" boxes, but nooooo, I just had to go and spend 3 DAYS TO MAKE MY OWN!!</p>
                     <li style="list-style-type: ' - ';"><a href="https://github.com/propjockey/augmented-ui?tab=readme-ov-file" style="font: 1.5em 'BlenderProBook'; color: white;"> github.com/propjockey/augmented-ui </a>
                 </div>
             </div>
-        </div>
 
-        <div class = "post2">
-            <h1> #realblogpost? </h1>
-            <div class = "cut-corner-box" style = "--border-color: white; transform: translate(5%); --background-color: rgb(0, 0, 0); width: 90%;">
+
+
+            <div id = "post2" class = "cut-corner-box">
                 <div class = "cut-corner-box-inner">
                     <p style="font-size: 1.5em; padding-left: 2%; padding-right: 2%;"> This video was kinda helpful with the making of this webpage </p>
                     <iframe width="100%" height="450em" src="https://www.youtube.com/embed/Fhlw88_Beu4?si=cVTwCg2drhg3zBO1" frameborder="0"style="border-top: var(--border-thicknes) solid var(--border-color);"></iframe>
                 </div>
             </div>
-        </div>
-    
 
-        <div class = "post2">
-            <h1> #giftest </h1>
-            <div class = "cut-corner-box" style = "--border-color: white; transform: translate(50%); --background-color: rgb(73, 28, 73); width: 50%;">
+
+
+            <div id = "post1" class = "cut-corner-box">
                 <div class = "cut-corner-box-inner">
                     <p style="font-size: 1.5em;"> Cyberpunk-esk gif? </p>
                     <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJ3NnNnZTVzcW0wdnd4YXJ1aGw2djVkcjFrb2ppd2U3Z2d1ZTBtaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QTxF50wnvVaXDU3IJQ/giphy.webp" style="border-top: var(--border-thicknes) solid var(--border-color);">
                 </div>
             </div>
-        </div>
 
-        <div class = "post1">
-            <h1> Scott is a tortured poet! </h1>
-            <div class = "cut-corner-box" style = "--border-color: white; width: 100%; width: 100%;">
+
+
+            <div id = "post0" class = "cut-corner-box">
                 <div class = "cut-corner-box-inner">
                     <object type = "text/html" data = "txt/fnaf6endingspeech.html" id = "fnaf"> </object>
                 </div>
             </div>
-        </div>
+
 
     </div>
 
@@ -90,7 +117,6 @@
     <div id = "footer">
         <h1> Pēdgalis </h1>
         <h3> Author: My ass </h3>
-        <a href="dungeon/level.html" style="font-size: 2rem; float: right; margin-right: 3%; color: rgb(0, 0, 0);"> Secrets </a>
     </div>
 </body>
 </html>

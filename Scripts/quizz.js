@@ -204,13 +204,19 @@ function startQuizz () {
     
     document.getElementById("question-paragraph").textContent = file[activeQuizz].questions[quizzQuestionCounter].question;
 
-    if (file[activeQuizz].questions[quizzQuestionCounter].questionAttachment == "") {document.getElementById("question-attachment").parentElement.parentElement.style.display = "none";}
+    let presentQuestion = file[activeQuizz].questions[quizzQuestionCounter];
+
+    if (file[activeQuizz].questions[quizzQuestionCounter].questionAttachment == "") {
+        document.getElementById("question-attachment").parentElement.parentElement.style.display = "none";}
     else {
         let img = document.getElementById("question-attachment");
-        img.src = file[activeQuizz].questions[quizzQuestionCounter].questionAttachment;
+        img.src = presentQuestion.questionAttachment;
 
         if (img.naturalWidth > img.naturalHeight){
-            img.parentElement.parentElement.style.width = "50%";
+            img.parentElement.parentElement.style.width = "30vw";
+        }
+        if (img.naturalWidth < img.naturalHeight) {
+            img.parentElement.parentElement.style.width = "10vw"
         }
     }
 
@@ -304,14 +310,16 @@ function answerButtonEvent (button) {
     nodeClone.querySelector("#question-paragraph").textContent = presentQuestion.question; // sets up the question
 
     if (file[activeQuizz].questions[quizzQuestionCounter].questionAttachment == "") {
-        nodeClone.querySelector("#question-attachment").parentElement.parentElement.style.display = "none"; 
-        nodeClone.querySelector("#question-attachment").parentElement.parentElement.style.width = "10vw";}
+        nodeClone.querySelector("#question-attachment").parentElement.parentElement.style.display = "none";}
     else {
         let img = nodeClone.querySelector("#question-attachment");
         img.src = presentQuestion.questionAttachment;
 
         if (img.naturalWidth > img.naturalHeight){
-            img.parentElement.parentElement.style.width = "50%";
+            img.parentElement.parentElement.style.width = "30vw";
+        }
+        if (img.naturalWidth < img.naturalHeight) {
+            img.parentElement.parentElement.style.width = "10vw"
         }
     }
 

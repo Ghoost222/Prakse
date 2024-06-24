@@ -1,18 +1,13 @@
-html body {
-    padding: 0;
-    margin: 0;
-    background-color: rgb(30, 39, 50);
-    height: 100%;
-}
-
 body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient( rgba(38,15,14,1) 0%, rgba(9,9,18,1) 100%);
+    background-attachment: fixed;
     display: flex;
-    flex-wrap: wrap;
 }
 
-.header {
+#header {
     position: fixed;
-    color: white;
 
     padding: 1%;
     width: 100%;
@@ -23,11 +18,12 @@ body {
     display: flex;
     z-index: 1;
 
-    background-color: black;
-    background-image: linear-gradient(to left, #e07bda, #b65fc8, #8547b0, #573299, #2c2081, #121c69, #090E35, transparent);
+    /*background-color: rgb(184, 57, 53);*/
+    background-color: rgba(9,9,18,1);
+    background-image: linear-gradient(to right, transparent 0%, rgba(38,15,14,1) 100%);
     background-position-x: right;
     background-repeat: no-repeat;
-    background-size: 20%;
+    background-size: 40%;
     /*background-image: url('https://www.shecodes.io/assets/backgrounds/vectors-68d3246d3ce91acc9d2cea09a5a41aa072c9b3df4cfc2904028ff7c5c6428d44.png');
     background-repeat: no-repeat;
     background-position-y: center;
@@ -36,66 +32,172 @@ body {
 
     a {
         margin-left: 2%;
+        --color: white;
 
         button{
             background-color: transparent;
             background-repeat: no-repeat;
+
             border: none;
             border-bottom: 1px solid transparent;
             cursor: pointer;
             overflow: hidden;
             outline: none;
         
-            color: white;
+            color: var(--color);
             font-size: 2rem;
-            font-family: "GlitchGoblin";
+            font-family: "BlenderProBook";
+            font-weight: bold;
         
             float: left;
+
+            cursor: pointer;
+            transition: background 0.5s ease;
+
         }
 
         button:hover {
             border: transparent;
-            border-bottom: 1px solid white;
-            color: white;
-            /*text-shadow: 5px 0 rgb(201, 50, 50),  -5px 0 rgb(50, 158, 201);*/
+            border-bottom: 1px solid var(--color);
+            /*background-image: linear-gradient(to top, #1596bd, transparent);*/
             text-shadow: 5px 0 red,  -5px 0 cyan;
         }
     }
 }
 
-.main {
-    font-family: "JetBrainsMono";
+#main {
+    font-family: "BlenderProBook";
+
     width: 100%;
-    height: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
+    height: 100%;
 
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-items: flex-start;
-}
 
-#clock-holder {
-    bottom: 0;
-    left: 0;
-    width: 10%;
 
-    text-align: center;
-    align-items: center;
+    #list0 {
+        width: 30%;
 
-    background: transparent;
-    font-family: "BlenderProBook";
-    font-size: 1.5em;
-    font-weight: bolder;
+        .left-side-top-lip-box {
+            --corner-cuts: 3vh; 
+            --background-color: transparent; 
+            --border-color: #671f23;
+            --lip-height: 6vh;
+            --border-thicknes: 2px;
+            color: white;
+    
+            margin-top: 5%;
+            margin-bottom: 5%;
+        
+            .left-side-top-lip-box-inner {
+                height: 78vh;
+                justify-content: right;
+                flex-direction: column;
+    
 
-    #clock {
-        font-family: inherit;
-        font-size: inherit;
-        font-weight: inherit;
-        background: none;
-        color: inherit;
-        border: none;
+                #clear-button {
+                    width: var(--corner-cuts);
+                    height: calc(var(--lip-height) + var(--corner-cuts));
+
+                    position: absolute;
+                    left: 0;
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        transform: rotate(-90deg);
+                    }
+                }
+    
+                #tittle-card {
+                    height: calc(var(--lip-height) + var(--corner-cuts) - var(--border-thicknes) - var(--border-thicknes));
+                    width: calc(100% - var(--corner-cuts));
+                    background-color: transparent;
+                    border-left: var(--border-thicknes) solid var(--border-color);
+                    border-bottom: var(--border-thicknes) solid var(--border-color); 
+                    float: right;
+
+                    display: flex;
+                    flex-direction: row;
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        margin-left: 2%;
+                        padding-top: auto;
+                        padding-bottom: auto;
+                        width: 100%;
+                    }
+
+                    textarea {
+                        color: white;
+                        background-color: #671f23;
+                        
+                        border: none;
+                        outline: none;
+                        resize: none;
+
+                        margin: 1vh;
+
+                        width: 100%;
+                    }
+
+                    #add-button {
+                        margin: 1vh;
+                        margin-left: 0;
+            
+                        button {
+                            margin: 0;
+                            padding: auto;
+                            font-size: large;
+                            
+                            width: var(--lip-height) ;
+                        }
+
+                        .cut-corner-box {
+                            --border-color: #671f23;
+                            --background-color: transparent;
+                            --corner-cuts: 5px;
+                            --transition-time: 0.3s;
+                        }
+                    }
+                }
+
+                #List {
+                    width: calc(100% - var(--corner-cuts));
+                    height: 100%;
+                    margin-left: var(--corner-cuts);
+                    overflow-y: auto;
+
+                    .list-entry {
+                        border: 2px solid #671f23;
+
+                        margin: 2%;
+
+                        display: flex;
+                        flex-direction: row;
+
+                        margin-bottom: 0;
+
+                        h2 {
+                            margin-left: 2%;
+                            width: 100%;
+                            word-break:break-word;
+                        }
+
+                        button {
+                            margin: 1%;
+                            font-size: medium;
+                            width: auto;
+                            height: auto;
+                            border: 2px solid #671f23;
+                        }
+                    }
+                }
+    
+            }
+        }
     }
+    
 }
