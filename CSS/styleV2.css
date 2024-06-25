@@ -30,39 +30,41 @@ body {
     background-position-x: center;
     background-size: 100%;*/
 
-    a {
+
+    button {
+        background-color: transparent;
+        background-repeat: no-repeat;
+
+        border: none;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+    
+        color: white;
+        font-size: 2rem;
+        font-family: "BlenderProBook";
+        font-weight: bold;
+    
+        float: left;
+
+        cursor: pointer;
+        transition: background 0.5s ease;
         margin-left: 2%;
-        --color: white;
 
-        button{
-            background-color: transparent;
-            background-repeat: no-repeat;
-
-            border: none;
-            border-bottom: 1px solid transparent;
-            cursor: pointer;
-            overflow: hidden;
-            outline: none;
-        
-            color: var(--color);
-            font-size: 2rem;
-            font-family: "BlenderProBook";
-            font-weight: bold;
-        
-            float: left;
-
-            cursor: pointer;
-            transition: background 0.5s ease;
-
-        }
-
-        button:hover {
-            border: transparent;
-            border-bottom: 1px solid var(--color);
-            /*background-image: linear-gradient(to top, #1596bd, transparent);*/
-            text-shadow: 5px 0 red,  -5px 0 cyan;
+        a {
+            text-decoration: none;
+            color: white;
         }
     }
+
+    button:hover {
+        border: transparent;
+        border-bottom: 1px solid var(--color);
+        /*background-image: linear-gradient(to top, #1596bd, transparent);*/
+        text-shadow: 5px 0 red,  -5px 0 cyan;
+    }
+    
 }
 
 
